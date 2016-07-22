@@ -452,7 +452,7 @@ HITrackCorrectionAnalyzer::passesTrackCuts(const reco::Track & track, const reco
    for(unsigned i = 0; i < algoParameters_.size(); i++){
       if( algo == algoParameters_[i] ) count++;
    }
-   if(track.pt()>2.5 && count == 0 ) return false;
+   if(track.pt()>2.4 && count == 0 ) return false;
    if(chi2n > chi2nMax_ ) return false;  
 
    return true;
